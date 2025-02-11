@@ -10,7 +10,7 @@
 <div class="relative bg-[#f7f6f9] h-full min-h-screen font-[sans-serif]">
     <div class="flex items-start">
       <nav id="sidebar" class="lg:min-w-[250px] w-max max-lg:min-w-8">
-        <div id="sidebar-collapse-menu"
+        <div id="sidebar-collapse-menu" 
           class="bg-white shadow-lg h-screen fixed top-0 left-0 overflow-auto z-[99] lg:min-w-[250px] lg:w-max max-lg:w-0 max-lg:invisible transition-all duration-500">
           <div class="flex items-center gap-2 pt-6 pb-2 px-4 sticky top-0 bg-white min-h-[64px] z-[100]">
             
@@ -589,7 +589,7 @@
 
 
   <?php
-include '../components/footer.php';
+include 'components/footer.php';
 ?>
 
 

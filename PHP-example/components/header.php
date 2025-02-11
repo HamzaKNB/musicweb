@@ -1,5 +1,6 @@
 <?php
 define ('ROOT_DIR', '/hamza/php-example/');
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +14,7 @@ define ('ROOT_DIR', '/hamza/php-example/');
 <body>
 <header class='flex shadow-lg py-4 px-4 sm:px-10 bg-black font-[sans-serif] min-h-[70px] tracking-wide relative z-50'>
       <div class='flex flex-wrap items-center justify-between gap-4 w-full'>
-        <a href="javascript:void(0)"
+         <a href='<?= ROOT_DIR ?>'
           class="lg:absolute max-lg:left-10 lg:top-2/4 lg:left-2/4 lg:-translate-x-1/2 lg:-translate-y-1/2 max-sm:hidden"><img
             src="https://readymadeui.com/readymadeui.svg" alt="logo" class='w-36' />
         </a>
@@ -45,14 +46,14 @@ define ('ROOT_DIR', '/hamza/php-example/');
               <a href='<?= ROOT_DIR ?>'
                 class='hover:text-white text-[#007bff] block font-semibold text-[15px]'>Home</a>
             </li>
-            <li class='max-lg:border-b max-lg:py-3 px-3'> <a href='<?= ROOT_DIR ?>pages/blog.php'
+            <li class='max-lg:border-b max-lg:py-3 px-3'> <a href='blog'
               class='hover:text-white text-[#007bff] block font-semibold text-[15px]'>Blog</a>
             </li>
-            <li class='max-lg:border-b max-lg:py-3 px-3'><a href='<?= ROOT_DIR ?>pages/Contact.php'
+            <li class='max-lg:border-b max-lg:py-3 px-3'><a href='contact'
               class='hover:text-white text-[#007bff] block font-semibold text-[15px]'>Contact</a>
             </li>
 
-            <li class='max-lg:border-b max-lg:py-3 px-3'><a href='<?= ROOT_DIR ?>pages/dashboard.php'
+            <li class='max-lg:border-b max-lg:py-3 px-3'><a href='dashboard'
               class='hover:text-white text-[#007bff] block font-semibold text-[15px]'>Dashboard</a>
             </li>
             
@@ -66,11 +67,11 @@ define ('ROOT_DIR', '/hamza/php-example/');
         </div>
 
         <div class='flex items-center ml-auto space-x-6'>
-          <button class='font-semibold text-[15px] border-none outline-none'><a href='<?= ROOT_DIR ?>pages/login.php'
+          <button class='font-semibold text-[15px] border-none outline-none'><a href='login'
             class='text-[#007bff] hover:underline'>Login</a></button>
           <button
             
-         class='font-semibold text-[15px] border-none outline-none'><a href='<?= ROOT_DIR ?>pages/register.php'
+         class='font-semibold text-[15px] border-none outline-none'><a href='register'
           class='text-[#007bff] hover:underline'>Sign up</a></button></button>
 
           <button id="toggleOpen" class='lg:hidden'>
