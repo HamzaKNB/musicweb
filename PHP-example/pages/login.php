@@ -24,7 +24,7 @@ include 'components/header.php';
               </div>
 
               <div>
-                <label class="text-gray-800 text-xs block mb-2">Email</label>
+                <label class="text-gray-800 text-xs block mb-2">email</label>
                 <div class="relative flex items-center">
                   <input name="email" type="text" required class="w-full text-gray-800 text-sm border-b border-gray-300 focus:border-blue-600 pl-2 pr-8 py-3 outline-none" placeholder="Enter email" />
                   <svg xmlns="http://www.w3.org/2000/svg" fill="#bbb" stroke="#bbb" class="w-[18px] h-[18px] absolute right-2" viewBox="0 0 682.667 682.667">

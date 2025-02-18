@@ -28,9 +28,9 @@ include 'components/header.php';
 
             
             <div>
-              <label class="text-white text-xs block mb-2">First Name</label>
+              <label class="text-white text-xs block mb-2">firstname</label>
               <div class="relative flex items-center">
-                <input name="Firstname" type="text" required class="w-full bg-transparent text-sm text-white border-b border-gray-300 focus:border-yellow-400 pl-2 pr-8 py-3 outline-none" placeholder="Enter name" />
+                <input name="firstname" type="text" required class="w-full bg-transparent text-sm text-white border-b border-gray-300 focus:border-yellow-400 pl-2 pr-8 py-3 outline-none" placeholder="Enter name" />
                 <svg xmlns="http://www.w3.org/2000/svg" fill="#bbb" stroke="#bbb" class="w-[18px] h-[18px] absolute right-2" viewBox="0 0 24 24">
                   <circle cx="10" cy="7" r="6" data-original="#000000"></circle>
                   <path d="M14 15H6a5 5 0 0 0-5 5 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 5 5 0 0 0-5-5zm8-4h-2.59l.3-.29a1 1 0 0 0-1.42-1.42l-2 2a1 1 0 0 0 0 1.42l2 2a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42l-.3-.29H22a1 1 0 0 0 0-2z" data-original="#000000"></path>
@@ -38,9 +38,9 @@ include 'components/header.php';
               </div>
             </div>
             <div>
-              <label class="text-white text-xs block mb-2">Surname</label>
+              <label class="text-white text-xs block mb-2">surname</label>
               <div class="relative flex items-center">
-                <input name="Surname" type="text" required class="w-full bg-transparent text-sm text-white border-b border-gray-300 focus:border-yellow-400 pl-2 pr-8 py-3 outline-none" placeholder="Enter name" />
+                <input name="surname" type="text" required class="w-full bg-transparent text-sm text-white border-b border-gray-300 focus:border-yellow-400 pl-2 pr-8 py-3 outline-none" placeholder="Enter name" />
                 <svg xmlns="http://www.w3.org/2000/svg" fill="#bbb" stroke="#bbb" class="w-[18px] h-[18px] absolute right-2" viewBox="0 0 24 24">
                   <circle cx="10" cy="7" r="6" data-original="#000000"></circle>
                   <path d="M14 15H6a5 5 0 0 0-5 5 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 5 5 0 0 0-5-5zm8-4h-2.59l.3-.29a1 1 0 0 0-1.42-1.42l-2 2a1 1 0 0 0 0 1.42l2 2a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42l-.3-.29H22a1 1 0 0 0 0-2z" data-original="#000000"></path>
@@ -48,7 +48,7 @@ include 'components/header.php';
               </div>
             </div>
             <div class="mt-8">
-              <label class="text-white text-xs block mb-2">Email</label>
+              <label class="text-white text-xs block mb-2">email</label>
               <div class="relative flex items-center">
                 <input name="email" type="text" required class="w-full bg-transparent text-sm text-white border-b border-gray-300 focus:border-yellow-400 pl-2 pr-8 py-3 outline-none" placeholder="Enter email" />
                 <svg xmlns="http://www.w3.org/2000/svg" fill="#bbb" stroke="#bbb" class="w-[18px] h-[18px] absolute right-2" viewBox="0 0 682.667 682.667">
@@ -65,7 +65,7 @@ include 'components/header.php';
               </div>
             </div>
             <div class="mt-8">
-              <label class="text-white text-xs block mb-2">Password</label>
+              <label class="text-white text-xs block mb-2">password</label>
               <div class="relative flex items-center">
                 <input name="password" type="password" required class="w-full bg-transparent text-sm text-white border-b border-gray-300 focus:border-yellow-400 pl-2 pr-8 py-3 outline-none" placeholder="Enter password" />
                 <svg xmlns="http://www.w3.org/2000/svg" fill="#bbb" stroke="#bbb" class="w-[18px] h-[18px] absolute right-2 cursor-pointer" viewBox="0 0 128 128">
