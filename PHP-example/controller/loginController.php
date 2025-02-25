@@ -1,6 +1,6 @@
 <?php
 //start a seassion and include the database configuartion file to establish a database connection
-require 'databse/config.php';
+require 'database/config.php';
 session_start();
 
 //check iif the login form was submitted with both email and password fileds filled 
@@ -36,9 +36,9 @@ session_regenerate_id();
 setcookie("email", $_POST['email'], time() + 86400, "/", "", true, true);
 //Redirect user based on their role
 if ($role == 'admin') {
-    header('Location: pages/admin/dashboardAdmin'); //redirect  admin to admin dashboard
+    header('Location: admin/dashboardAdmin'); //redirect  admin to admin dashboard
 } else {  
-    header('Location: pages/dashboard'); // Redirect regular users to user dashboard
+    header('Location: dashboard'); // Redirect regular users to user dashboard
 }
 exit();
 } else {

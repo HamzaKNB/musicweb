@@ -17,9 +17,10 @@ include 'components/header.php';
       <div class="min-h-screen flex flex-col items-center justify-center">
         <div class="grid md:grid-cols-2 items-center gap-4 max-md:gap-8 max-w-6xl max-md:max-w-lg w-full p-4 m-4 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md">
           <div class="md:max-w-md w-full px-4 py-4">
-            <form>
+            <form class="max-w-lg w-full mx-auto" action="loginController" method= "post">>
               <div class="mb-12">
                 <h3 class="text-gray-800 text-3xl font-extrabold">Sign in</h3>
+                
                 <p class="text-sm mt-4 text-gray-800">Don't have an account <a href="javascript:void(0);" class="text-blue-600 font-semibold hover:underline ml-1 whitespace-nowrap">Register here</a></p>
               </div>
 
@@ -66,7 +67,7 @@ include 'components/header.php';
               </div>
 
               <div class="mt-12">
-                <button type="button" class="w-full shadow-xl py-2.5 px-4 text-sm tracking-wide rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none">
+                <button type="submit" class="w-full shadow-xl py-2.5 px-4 text-sm tracking-wide rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none">
                   Sign in
                 </button>
               </div>

@@ -47,15 +47,13 @@ session_start();
                 class='hover:text-white text-[#007bff] block font-semibold text-[15px]'>Home</a>
             </li>
             <li class='max-lg:border-b max-lg:py-3 px-3'> <a href='blog'
+            
               class='hover:text-white text-[#007bff] block font-semibold text-[15px]'>Blog</a>
             </li>
             <li class='max-lg:border-b max-lg:py-3 px-3'><a href='contact'
               class='hover:text-white text-[#007bff] block font-semibold text-[15px]'>Contact</a>
             </li>
 
-            <li class='max-lg:border-b max-lg:py-3 px-3'><a href='dashboard'
-              class='hover:text-white text-[#007bff] block font-semibold text-[15px]'>Dashboard</a>
-            </li>
             
 
 

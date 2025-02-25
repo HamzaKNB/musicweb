@@ -1,3 +1,10 @@
+<?php
+define ('ROOT_DIR', '/hamza/php-example/');
+include 'database/config.php';
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +21,7 @@
           class="bg-white shadow-lg h-screen fixed top-0 left-0 overflow-auto z-[99] lg:min-w-[250px] lg:w-max max-lg:w-0 max-lg:invisible transition-all duration-500">
           <div class="flex items-center gap-2 pt-6 pb-2 px-4 sticky top-0 bg-white min-h-[64px] z-[100]">
             
-            <a href="javascript:void(0)"> <img src="https://readymadeui.com/readymadeui.svg" alt="logo"
+            <a href='<?= ROOT_DIR ?>'> <img src="https://readymadeui.com/readymadeui.svg" alt="logo"
                 class='w-[140px]' />
             </a>
             <button id="close-sidebar" class='lg:hidden ml-auto'>

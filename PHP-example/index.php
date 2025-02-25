@@ -5,7 +5,8 @@ $url =isset($_GET['url'])? rtrim($_GET['url'],'/'): "";
 
 // Define available routes (URL => corresponding PHP file)
 $routes = [    
-    '' => 'pages/index.php',          // Home route
+    '' => 'pages/index.php',
+    'home' => 'pages/index.php',           // Home route
     'contact' => 'pages/contact.php',          // contact route
     'register' => 'pages/register.php',    // register page route
 
@@ -13,11 +14,14 @@ $routes = [
     'blog' => 'pages/blog.php', // blog page route
     'admin' => 'pages/admin/dashboardAdmin.php', // admin page route
     'dashboard' => 'pages/dashboard.php', // user page route
+    'blogInfo'=> 'pages/BlogInfo/blogInfo.php',
 
 
 //configuration files
 
 'registerController' => 'controller/registerController.php',
+'loginController' => 'controller/loginController.php',
+'logoutController' => 'controller/logoutController.php',
 ];
 
 
