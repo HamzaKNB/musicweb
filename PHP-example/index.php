@@ -22,6 +22,8 @@ $routes = [
 'registerController' => 'controller/registerController.php',
 'loginController' => 'controller/loginController.php',
 'logoutController' => 'controller/logoutController.php',
+'commentsController' => 'controller/commentsController.php',
+
 ];
 
 
@@ -34,15 +36,3 @@ if (array_key_exists($url, $routes)){
     require 'pages/error_404.php';
 }
 ?>
-
-
-
-
-
-
-
-
-
-
-
-    

@@ -2,7 +2,7 @@
 session_start();
 session_destroy();
 
-header("Location: home")
-exit();
+header("Location: ../pages/index.php");
 
+exit();
 ?>

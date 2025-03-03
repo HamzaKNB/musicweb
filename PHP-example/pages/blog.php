@@ -1,12 +1,12 @@
 <?php
-include 'components/header.php';
+include '../components/header.php';
 ?>
 
 <?php
-include 'components2/blogbody.php';
+include '../components2/blogbody.php';
 ?>
 
 
 <?php
-include 'components/footer.php';
+include '../components/footer.php';
 ?>

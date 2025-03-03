@@ -8,7 +8,7 @@
 </head>
 <body>
 <?php
-include 'database/config.php';
+include '../database/config.php';
 $blog = $conn->prepare("SELECT
     id,
     title,
@@ -33,7 +33,7 @@ $blog->bind_result($blogId,$blogTitle,$blogImg,$blogContent,$status);
               <h3 class="text-lg font-bold text-gray-800 mb-3"><?= $blogTitle?> 
               <p class="text-gray-500 text-sm">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore...</p>
               <p class="text-orange-500 text-[13px] font-semibold mt-4">08 April 2024</p>
-              <a href="blogInfo?bid=<?=$blogId?>" class="mt-4 inline-block px-4 py-2 rounded tracking-wider bg-orange-500 hover:bg-orange-600 text-white text-[13px]">Read More</a>
+              <a href="../pages/BlogInfo/blogInfo.php?bid=<?=$blogId?>" class="mt-4 inline-block px-4 py-2 rounded tracking-wider bg-orange-500 hover:bg-orange-600 text-white text-[13px]">Read More</a>
             </div>
           </div>
           <?php endwhile ?>

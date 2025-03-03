@@ -9,7 +9,7 @@
 <body>
 
 <?php
-include 'components/header.php';
+include '../components/header.php';
 ?>
 
 <div class="font-[sans-serif] bg-white md:h-screen">
@@ -19,14 +19,13 @@ include 'components/header.php';
         </div>
 
         <div class="flex items-center md:p-8 p-6 bg-[#0C172C] h-full lg:w-11/12 lg:ml-auto">
-          <form class="max-w-lg w-full mx-auto" action="registerController" method= "post">
+          <form class="max-w-lg w-full mx-auto" action="../controller/registerController.php" method= "post">
             <div class="mb-12">
               <h3 class="text-2xl font-bold text-yellow-400">Create an account</h3>
             </div>
 
 
 
-            
             <div>
               <label class="text-white text-xs block mb-2">firstname</label>
               <div class="relative flex items-center">
@@ -82,11 +81,12 @@ include 'components/header.php';
             </div>
 
             <div class="mt-8">
+            <form action="" method="POST">
               <button type="submit" class="w-max shadow-xl py-3 px-6 text-sm text-gray-800 font-semibold rounded bg-transparent bg-yellow-400 hover:bg-yellow-500 focus:outline-none">
                 Register
               </button>
+              </form>
             </div>
-          </form>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 <?php
 define ('ROOT_DIR', '/hamza/php-example/');
-include 'database/config.php';
+include '../database/config.php';
 ?>
 
 
