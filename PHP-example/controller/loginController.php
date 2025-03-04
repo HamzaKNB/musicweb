@@ -9,7 +9,7 @@ require '../database/config.php';
 if (empty(trim($_POST['email'])) || empty(trim($_POST['password']))) {
     // Set a session error message and redirect to the login page if any field is empty
     $_SESSION['status_message'] = 'Please fill both the username and password fields!';
-    header('Location: ../pages/login.php');
+    header('Location: login');
     exit();
 }
 
@@ -40,21 +40,21 @@ if ($stmt = $conn->prepare('SELECT id, password, role FROM user WHERE email = ?'
 
             // Redirect user based on their role
             if ($role == 'admin') {
-                header('Location: ../pages/admin/dashboardAdmin.php'); // Redirect admin to admin dashboard
+                header('Location: admin'); // Redirect admin to admin dashboard
             } else {
-                header('Location: ../pages/dashboard.php'); // Redirect regular users to user dashboard
+                header('Location: dashboard'); // Redirect regular users to user dashboard
             }
             exit();
         } else {
             // If password is incorrect, set an error message and redirect back to login page
             $_SESSION['status_message'] = 'Incorrect email or password!';
-            header('Location: ../pages/login.php');
+            header('Location: login');
             exit();
         }
     } else {
         // If email does not exist, set an error message and redirect to login page
         $_SESSION['status_message'] = 'Incorrect email or password!';
-        header('Location: ../pages/login.php');
+        header('Location: login');
         exit();
     }
 
@@ -63,7 +63,7 @@ if ($stmt = $conn->prepare('SELECT id, password, role FROM user WHERE email = ?'
 } else {
     // If preparing the SQL statement fails, set an error message and redirect to login page
     $_SESSION['status_message'] = 'Login system error. Please try again later.';
-    header('Location: ../pages/login.php');
+    header('Location: login');
     exit();
 }
 ?>

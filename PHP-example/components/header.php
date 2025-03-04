@@ -39,21 +39,38 @@ session_start();
             <li class='max-lg:border-b max-lg:py-3 px-3'><a href='<?= ROOT_DIR ?>pages/dashboard.php' class='hover:text-white text-[#007bff] block font-semibold text-[15px]'>Dashboard</a></li>
           <?php elseif ($_SESSION['role'] === 'admin') : ?>
             <li class='max-lg:border-b max-lg:py-3 px-3'><a href='<?= ROOT_DIR ?>pages/admin/dashboardAdmin.php' class='hover:text-white text-[#007bff] block font-semibold text-[15px]'>Dashboard</a></li>
-          <?php endif; ?>
+          <?php endif ?>
           <li class="max-lg:border-b max-lg:py-3 px-3">
-          <form action="<?= ROOT_DIR ?>controller/logoutController.php" method="post" style="display: inline;">
-          <button type="submit" class='hover:text-white text-[#007bff] block font-semibold text-[15px]'>Logout</button>
-          </form>
+            <form action="<?= ROOT_DIR ?>logoutController" method="post" style="display: inline;">
+              <button type="submit" class='hover:text-white text-[#007bff] block font-semibold text-[15px]'>Logout</button>
+            </form>
           </li>
-        <?php endif; ?>
+        <?php endif ?>
       </ul>
     </div>
+
+    <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) : ?>
+      <?php if ($_SESSION['role'] === 'admin') : ?>
+        <li class='max-lg:border-b max-lg:py-3 px-3'>
+          <a href='<?= ROOT_DIR ?>admin' class='hover:text-[#007bff] text-[#333] block font-semibold text-[15px]'>Dashboard</a>
+        </li>
+        <li class='max-lg:border-b max-lg:py-3 px-3'>
+          <a href='<?= ROOT_DIR ?>Comments' class='hover:text-[#007bff] text-[#333] block font-semibold text-[15px]'>Comments</a>
+        </li>
+      <?php elseif ($_SESSION['role'] === 'user') : ?>
+        <li class='max-lg:border-b max-lg:py-3 px-3'>
+          <a href='<?= ROOT_DIR ?>user' class='hover:text-[#007bff] text-[#333] block font-semibold text-[15px]'>Dashboard</a>
+        </li>
+      <?php endif ?>
+    <?php endif ?>
 
     <?php if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) : ?>
       <div class='flex items-center ml-auto space-x-6'>
         <button class='font-semibold text-[15px] border-none outline-none'><a href='<?= ROOT_DIR ?>pages/login.php' class='text-[#007bff] hover:underline'>Login</a></button>
         <button class='px-4 py-2 text-sm rounded-sm font-bold text-white border-2 border-[#007bff] transition-all ease-in-out duration-300 hover:bg-transparent hover:text-[#007bff]'><a href='<?= ROOT_DIR ?>pages/register.php' class='text-[#007bff] hover:underline'>Sign up</a></button>
       </div>
-    <?php endif; ?>
+    <?php endif ?>
   </div>
 </header>
+</body>
+</html>

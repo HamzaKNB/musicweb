@@ -14,26 +14,26 @@ $role = trim($_POST['role']);
 // Validate username (alphanumeric)
 if (!preg_match('/^[a-zA-Z0-9]+$/', $firstname)) {
     $_SESSION['status_message'] = 'firstname is not valid! Only alphanumeric characters are allowed.';
-    header('Location:../pages/register.php');
+    header('Location:register');
     exit();
 }
 if (!preg_match('/^[a-zA-Z0-9]+$/', $surname)) {
     $_SESSION['status_message'] = 'surname is not valid! Only alphanumeric characters are allowed.';
-    header('Location: ../pages/register.php');
+    header('Location: register');
     exit();
 }
 
 // Validate password (between 5 and 20 characters)
 if (strlen($password) < 5 || strlen($password) > 20) {
     $_SESSION['status_message'] = 'Password must be between 5 and 20 characters long!';
-    header('Location: ../pages/register.php');
+    header('Location: register');
     exit();
 }
 
 // Validate email (basic validation, can be expanded)
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $_SESSION['status_message'] = 'Invalid email format!';
-    header('Location: ../pages/register.php');
+    header('Location: register');
     exit();
 }
 
@@ -47,7 +47,7 @@ if ($stmt->num_rows > 0) {
     // Username already exists
     $_SESSION['status_message'] = 'Email address already exists! Please login.';
     $stmt->close();
-    header('Location: ../pages/login.php');
+    header('Location:login');
     exit();
 } else {
     $stmt->close();
@@ -66,16 +66,16 @@ if ($stmt->num_rows > 0) {
         // If account creation is successful
         if ($stmt->affected_rows > 0) {
             $_SESSION['status_message'] = 'Account successfully created! You can now log in.';
-            header('Location: ../pages/login.php');
+            header('Location: login');
         } else {
             $_SESSION['status_message'] = 'Account creation failed. Please try again later.';
-            header('Location: ../pages/register.php');
+            header('Location: register');
         }
 
         $stmt->close();
     } else {
         $_SESSION['status_message'] = 'Database error. Please try again later.';
-        header('Location: ..pages/register.php');
+        header('Location: register');
     }
 
     $conn->close();

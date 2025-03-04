@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $stmt->bind_param("iis", $blog_id, $user_id, $content);
 
     if ($stmt->execute()) {
-        header('Location: ../pages/BlogInfo/bloginfo.php');
+        header('Location: blogInfo');
         exit();
     } else {
         die("Error submitting comment.");

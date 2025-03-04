@@ -15,7 +15,9 @@ $routes = [
     'admin' => 'pages/admin/dashboardAdmin.php', // admin page route
     'dashboard' => 'pages/dashboard.php', // user page route
     'blogInfo'=> 'pages/BlogInfo/blogInfo.php',
-
+    'Comments'=> 'pages/admin/Comments.php',
+    'comments'=> 'pages/BlogInfo/comments.php',
+    
 
 //configuration files
 

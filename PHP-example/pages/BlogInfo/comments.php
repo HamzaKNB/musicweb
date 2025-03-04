@@ -3,7 +3,7 @@ session_start();
 include '../../database/config.php';
 
 if (!isset($_SESSION['id'])) {
-    header("Location: login.php"); // Redirect to login if not logged in
+    header("Location: login"); // Redirect to login if not logged in
     exit();
 }
 
@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("iis", $blog_id, $user_id, $content);
 
     if ($stmt->execute()) {
-        header('Location: ../../pages/BlogInfo/bloginfo.php');
+        header('Location: blogInfo');
         exit();
     } else {
         die("Error posting comment.");
